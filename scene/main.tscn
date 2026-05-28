@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://j740fphe4fg3"]
+
+[ext_resource type="Script" uid="uid://d3iyfmqml1iop" path="res://script/main.gd" id="1_itxqv"]
+[ext_resource type="PackedScene" uid="uid://bdf2u6arx46ao" path="res://scene/paper.tscn" id="2_brvut"]
+[ext_resource type="PackedScene" uid="uid://n2mfwtleep6p" path="res://scene/hud.tscn" id="3_0ha60"]
+[ext_resource type="PackedScene" uid="uid://cn8lnvrs3coan" path="res://scene/stamp.tscn" id="4_4j5ol"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_itxqv")
+
+[node name="bg" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1764706, 0.105882354, 0.4117647, 1)
+
+[node name="gamesscene" type="Node" parent="."]
+
+[node name="paper" parent="gamesscene" instance=ExtResource("2_brvut")]
+
+[node name="hud" parent="gamesscene" instance=ExtResource("3_0ha60")]
+
+[node name="stamp" parent="gamesscene" instance=ExtResource("4_4j5ol")]

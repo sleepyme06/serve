@@ -1,0 +1,247 @@
+[gd_scene load_steps=5 format=3 uid="uid://n2mfwtleep6p"]
+
+[ext_resource type="Script" uid="uid://do6m6h1r61nc0" path="res://script/hud.gd" id="1_s3k51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3k51"]
+bg_color = Color(0.1764706, 0.105882354, 0.4117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8u2p"]
+bg_color = Color(0.101960786, 0.05882353, 0.23921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvgpj"]
+bg_color = Color(0.101960786, 0.05882353, 0.23921569, 1)
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s3k51")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 50.0
+color = Color(0.050980393, 0.050980393, 0.101960786, 1)
+
+[node name="timer" type="Label" parent="bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -17.0
+offset_right = 20.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "30"
+horizontal_alignment = 1
+
+[node name="hint" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_top = 20.0
+offset_right = -25.0
+offset_bottom = 51.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_s3k51")
+text = "    peek    "
+
+[node name="win" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o8u2p")
+
+[node name="Label" type="Label" parent="win"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -11.5
+offset_right = 115.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+text = "You ate that scrapbook up ✨"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="win"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 44.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.1764706, 0.47058824, 1)
+theme_override_font_sizes/font_size = 10
+text = " Continue Serving"
+
+[node name="start" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o8u2p")
+
+[node name="Label" type="Label" parent="start"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -140.0
+offset_right = 130.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.1764706, 0.47058824, 1)
+theme_override_font_sizes/font_size = 40
+text = "SERVE"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="start"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -60.0
+offset_right = 90.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "                  Stamp it. Slay it."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="start"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -260.0
+offset_right = 100.0
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.1764706, 0.47058824, 1)
+theme_override_font_sizes/font_size = 10
+text = "Start Serving"
+
+[node name="loose" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o8u2p")
+
+[node name="Label" type="Label" parent="loose"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -11.5
+offset_right = 115.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+text = "Skill issue 💀"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="loose"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 44.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.1764706, 0.47058824, 1)
+theme_override_font_sizes/font_size = 10
+text = "Cook Again"
+
+[node name="pattern" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvgpj")
+
+[node name="Label" type="Label" parent="pattern"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 191.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "REMEMBER THIS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pattern"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 120.0
+offset_right = 420.0
+offset_bottom = 160.0
+theme_override_constants/separation = 16
+
+[connection signal="pressed" from="hint" to="." method="_on_hint_pressed"]

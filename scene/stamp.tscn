@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn8lnvrs3coan"]
+
+[ext_resource type="Script" uid="uid://cneo45ef2segh" path="res://script/stamp.gd" id="1_bo0sc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo0sc"]
+bg_color = Color(1, 0.1764706, 0.47058824, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c3p6"]
+bg_color = Color(1, 0.1764706, 0.47058824, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="stamp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_bo0sc")
+
+[node name="buttons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 540.0
+offset_right = 296.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="heart" type="Button" parent="buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_bo0sc")
+text = "♥"
+
+[node name="star" type="Button" parent="buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c3p6")
+text = "★"
+
+[node name="lighting" type="Button" parent="buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c3p6")
+text = "⚡"
+
+[node name="crown" type="Button" parent="buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c3p6")
+text = "♛"
+
+[node name="flower" type="Button" parent="buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c3p6")
+text = "✿
+"
